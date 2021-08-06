@@ -14,8 +14,8 @@ enum MarvelAPIError: Error {
     case unacceptableCode(Int)
 }
 
-class MarvelAPI {
-    static let shared: MarvelAPI = {
+class MarvelAPIClient {
+    static let shared: MarvelAPIClient = {
         guard let plistPath = Bundle.main.path(forResource: "marvelapi", ofType: "plist"),
               let plistDict = NSDictionary(contentsOfFile: plistPath) else {
                   fatalError("marvelapi.plist is not found.")
