@@ -11,10 +11,21 @@
 		141AB6B526BBBC03005B7E6B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB6B426BBBC03005B7E6B /* Tests_macOS.swift */; };
 		141AB6B626BBBC03005B7E6B /* MarvelherosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB69426BBBC01005B7E6B /* MarvelherosApp.swift */; };
 		141AB6B726BBBC03005B7E6B /* MarvelherosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB69426BBBC01005B7E6B /* MarvelherosApp.swift */; };
-		141AB6B826BBBC03005B7E6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB69526BBBC01005B7E6B /* ContentView.swift */; };
-		141AB6B926BBBC03005B7E6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB69526BBBC01005B7E6B /* ContentView.swift */; };
+		141AB6B826BBBC03005B7E6B /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB69526BBBC01005B7E6B /* CharactersView.swift */; };
+		141AB6B926BBBC03005B7E6B /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB69526BBBC01005B7E6B /* CharactersView.swift */; };
 		141AB6BA26BBBC03005B7E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141AB69626BBBC03005B7E6B /* Assets.xcassets */; };
 		141AB6BB26BBBC03005B7E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141AB69626BBBC03005B7E6B /* Assets.xcassets */; };
+		145F4EDC26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */; };
+		145F4EDD26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */; };
+		145F4EDF26BCAF0700BC17B1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EDE26BCAF0700BC17B1 /* Character.swift */; };
+		145F4EE026BCAF0700BC17B1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EDE26BCAF0700BC17B1 /* Character.swift */; };
+		145F4EE426BCB09000BC17B1 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EE326BCB09000BC17B1 /* MarvelAPI.swift */; };
+		145F4EE526BCB09000BC17B1 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EE326BCB09000BC17B1 /* MarvelAPI.swift */; };
+		145F4EE826BCD05A00BC17B1 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 145F4EE726BCD05A00BC17B1 /* CryptoSwift */; };
+		145F4EEA26BCD33000BC17B1 /* marvelapi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 145F4EE926BCD33000BC17B1 /* marvelapi.plist */; };
+		145F4EEB26BCD33000BC17B1 /* marvelapi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 145F4EE926BCD33000BC17B1 /* marvelapi.plist */; };
+		145F4EED26BCDF1A00BC17B1 /* CharactersGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EEC26BCDF1A00BC17B1 /* CharactersGateway.swift */; };
+		145F4EEE26BCDF1A00BC17B1 /* CharactersGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EEC26BCDF1A00BC17B1 /* CharactersGateway.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		141AB69426BBBC01005B7E6B /* MarvelherosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelherosApp.swift; sourceTree = "<group>"; };
-		141AB69526BBBC01005B7E6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		141AB69526BBBC01005B7E6B /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		141AB69626BBBC03005B7E6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		141AB69B26BBBC03005B7E6B /* Marvelheros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvelheros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		141AB6A126BBBC03005B7E6B /* Marvelheros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvelheros.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,11 @@
 		141AB6AA26BBBC03005B7E6B /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		141AB6B026BBBC03005B7E6B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		141AB6B426BBBC03005B7E6B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		145F4EDE26BCAF0700BC17B1 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		145F4EE326BCB09000BC17B1 /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
+		145F4EE926BCD33000BC17B1 /* marvelapi.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = marvelapi.plist; sourceTree = "<group>"; };
+		145F4EEC26BCDF1A00BC17B1 /* CharactersGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersGateway.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145F4EE826BCD05A00BC17B1 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,9 +108,11 @@
 		141AB69326BBBC01005B7E6B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				145F4EE226BCAFC800BC17B1 /* Data */,
+				145F4EE126BCAFC200BC17B1 /* Scene */,
 				141AB69426BBBC01005B7E6B /* MarvelherosApp.swift */,
-				141AB69526BBBC01005B7E6B /* ContentView.swift */,
 				141AB69626BBBC03005B7E6B /* Assets.xcassets */,
+				145F4EE926BCD33000BC17B1 /* marvelapi.plist */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -125,6 +144,33 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		145F4EDA26BCAE2000BC17B1 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				141AB69526BBBC01005B7E6B /* CharactersView.swift */,
+				145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */,
+				145F4EDE26BCAF0700BC17B1 /* Character.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		145F4EE126BCAFC200BC17B1 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				145F4EDA26BCAE2000BC17B1 /* Characters */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		145F4EE226BCAFC800BC17B1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				145F4EE326BCB09000BC17B1 /* MarvelAPI.swift */,
+				145F4EEC26BCDF1A00BC17B1 /* CharactersGateway.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +187,9 @@
 			dependencies = (
 			);
 			name = "Marvelheros (iOS)";
+			packageProductDependencies = (
+				145F4EE726BCD05A00BC17B1 /* CryptoSwift */,
+			);
 			productName = "Marvelheros (iOS)";
 			productReference = 141AB69B26BBBC03005B7E6B /* Marvelheros.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +282,9 @@
 				Base,
 			);
 			mainGroup = 141AB68E26BBBC00005B7E6B;
+			packageReferences = (
+				145F4EE626BCD05A00BC17B1 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = 141AB69C26BBBC03005B7E6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -250,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145F4EEA26BCD33000BC17B1 /* marvelapi.plist in Resources */,
 				141AB6BA26BBBC03005B7E6B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145F4EEB26BCD33000BC17B1 /* marvelapi.plist in Resources */,
 				141AB6BB26BBBC03005B7E6B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,8 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141AB6B826BBBC03005B7E6B /* ContentView.swift in Sources */,
+				145F4EE426BCB09000BC17B1 /* MarvelAPI.swift in Sources */,
+				145F4EDC26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */,
+				141AB6B826BBBC03005B7E6B /* CharactersView.swift in Sources */,
 				141AB6B626BBBC03005B7E6B /* MarvelherosApp.swift in Sources */,
+				145F4EED26BCDF1A00BC17B1 /* CharactersGateway.swift in Sources */,
+				145F4EDF26BCAF0700BC17B1 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,8 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141AB6B926BBBC03005B7E6B /* ContentView.swift in Sources */,
+				145F4EE526BCB09000BC17B1 /* MarvelAPI.swift in Sources */,
+				145F4EDD26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */,
+				141AB6B926BBBC03005B7E6B /* CharactersView.swift in Sources */,
 				141AB6B726BBBC03005B7E6B /* MarvelherosApp.swift in Sources */,
+				145F4EEE26BCDF1A00BC17B1 /* CharactersGateway.swift in Sources */,
+				145F4EE026BCAF0700BC17B1 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +517,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +547,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,6 +771,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		145F4EE626BCD05A00BC17B1 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		145F4EE726BCD05A00BC17B1 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 145F4EE626BCD05A00BC17B1 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 141AB68F26BBBC00005B7E6B /* Project object */;
 }
