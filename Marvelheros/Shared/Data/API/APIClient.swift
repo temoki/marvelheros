@@ -2,20 +2,8 @@ import Foundation
 import Combine
 import CryptoSwift
 
-protocol MarvelAPIRequest {
-    associatedtype Response: Decodable
-    var path: String { get }
-    var query: [String: String] { get }
-}
-
-enum MarvelAPIError: Error {
-    case sessionError(Error)
-    case decodeError(Error)
-    case unacceptableCode(Int)
-}
-
-class MarvelAPIClient {
-    static let shared: MarvelAPIClient = {
+class APIClient {
+    static let shared: APIClient = {
         guard let plistPath = Bundle.main.path(forResource: "marvelapi", ofType: "plist"),
               let plistDict = NSDictionary(contentsOfFile: plistPath) else {
                   fatalError("marvelapi.plist is not found.")
@@ -35,7 +23,7 @@ class MarvelAPIClient {
         self.session = session ?? URLSession(configuration: .default)
     }
     
-    func send<Request: MarvelAPIRequest>(_ request: Request) async throws -> Request.Response {
+    func send<Request: APIRequest>(_ request: Request) -> AnyPublisher<Request.Response, APIError> {
         let timestamp = Date().timeIntervalSince1970
         let hash = "\(timestamp)\(privateKey)\(publicKey)".md5()
         var queryItems: [URLQueryItem] = [
@@ -50,25 +38,29 @@ class MarvelAPIClient {
         var urlComponents = URLComponents(url: baseURL.appendingPathComponent(request.path), resolvingAgainstBaseURL: false)!
         urlComponents.queryItems = queryItems
         let urlRequest = URLRequest(url: urlComponents.url!)
-
-        let data: Data
-        let response: URLResponse
-        do {
-            (data, response) = try await session.data(for: urlRequest)
-        } catch {
-            throw MarvelAPIError.sessionError(error)
-        }
-
-        let statusCode = (response as! HTTPURLResponse).statusCode
-        guard (0..<400).contains(statusCode) else {
-            throw MarvelAPIError.unacceptableCode(statusCode)
-        }
         
-        do {
-            return try decoder.decode(Request.Response.self, from: data)
-        } catch {
-            throw MarvelAPIError.decodeError(error)
-        }
+        return session.dataTaskPublisher(for: urlRequest)
+            .mapError { APIError.sessionError($0) }
+            .tryMap { (data, response) -> Request.Response in
+                let statusCode = (response as! HTTPURLResponse).statusCode
+                guard (0..<400).contains(statusCode) else {
+                    if let responseBody = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                        throw APIError.unacceptableCode(statusCode, responseBody)
+                    } else if let responseString = String(data: data, encoding: .utf8) {
+                        throw APIError.unacceptableCode(statusCode, ["data": responseString] as NSDictionary)
+                    } else {
+                        throw APIError.unacceptableCode(statusCode, nil)
+                    }
+                }
+
+                do {
+                    return try JSONDecoder().decode(Request.Response.self, from: data)
+                } catch {
+                    throw APIError.decodeError(error)
+                }
+            }
+            .mapError { $0 as! APIError }
+            .eraseToAnyPublisher()
     }
     
     // MARK: - Private
@@ -78,5 +70,4 @@ class MarvelAPIClient {
     private let session: URLSession
 
     private let baseURL = URL(string: "https://gateway.marvel.com:443/v1/public/")!
-    private let decoder = JSONDecoder()
 }
