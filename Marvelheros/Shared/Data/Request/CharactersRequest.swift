@@ -1,10 +1,3 @@
-//
-//  Character.swift
-//  Character
-//
-//  Created by Tomoki Kobayashi on 2021/08/06.
-//
-
 import Foundation
 
 struct CharactersRequest {
@@ -85,8 +78,4 @@ extension CharactersRequest: APIRequest {
         }
         return queryItems
     }
-}
-
-struct CharacterEntity: Decodable {
-    var name: String
 }

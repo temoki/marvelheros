@@ -23,7 +23,7 @@ class APIClient {
         self.session = session ?? URLSession(configuration: .default)
     }
     
-    func send<Request: APIRequest>(_ request: Request) -> AnyPublisher<(URLRequest, APIResponseBody<Request.Result>), APIError> {
+    func send<Request: APIRequest>(_ request: Request) -> AnyPublisher<APIResponseBody<Request.Result>, APIError> {
         let urlRequest = urlRequest(for: request)
         return session.dataTaskPublisher(for: urlRequest)
             .mapError { APIError.sessionError($0) }
@@ -31,7 +31,6 @@ class APIClient {
                 try Self.decode(data, response)
             }
             .mapError { $0 as! APIError }
-            .map { (urlRequest, $0) }
             .eraseToAnyPublisher()
     }
     
@@ -74,7 +73,9 @@ class APIClient {
         }
 
         do {
-            return try JSONDecoder().decode(ResponseBody.self, from: data)
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            return try decoder.decode(ResponseBody.self, from: data)
         } catch {
             throw APIError.decodeError(error)
         }
