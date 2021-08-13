@@ -3,22 +3,46 @@ import Foundation
 
 class CharactersViewModel: ObservableObject {
     @Published var characters: [CharacterEntity] = []
+    @Published var isLoading: Bool = true
     @Published var alert: (isPresented: Bool, message: String) = (false, "")
     
     init() {
-        APIClient.shared
-            .send(CharactersRequest(limit: 100, offset: 0, orderBy: .nameAscending))
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { [weak self] competion in
-                if case .failure(let apiError) = competion {
-                    self?.alert = (true, "\(apiError)")
-                }
-            }, receiveValue: { [weak self] responseBody in
-                self?.characters = responseBody.data.results
-            })
-            .store(in: &cancellables)
+        subscribe()
+    }
+    
+    func onAppear(character: CharacterEntity) {
+        if character == characters.last {
+            requestNext()
+        }
     }
     
     // MARK: - Private
     private var cancellables = Set<AnyCancellable>()
+    private let offsetSubject = CurrentValueSubject<Int, Never>(0)
+    
+    private func requestNext() {
+        offsetSubject.send(characters.count)
+    }
+    
+    private func subscribe() {
+        offsetSubject
+            .handleEvents(receiveOutput: { [weak self] _ in
+                self?.isLoading = true
+            })
+            .flatMap { offset in
+                APIClient.shared.send(CharactersRequest(limit: 100, offset: offset, orderBy: .nameAscending))
+            }
+            .prefix(while: { !$0.data.results.isEmpty })
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { [weak self] competion in
+                self?.isLoading = false
+                if case .failure(let apiError) = competion {
+                    self?.alert = (true, "\(apiError)")
+                }
+            }, receiveValue: { [weak self] responseBody in
+                self?.isLoading = false
+                self?.characters.append(contentsOf: responseBody.data.results)
+            })
+            .store(in: &cancellables)
+    }
 }

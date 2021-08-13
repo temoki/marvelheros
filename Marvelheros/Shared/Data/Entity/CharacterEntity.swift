@@ -1,7 +1,7 @@
 import Foundation
 
-struct CharacterEntity: Decodable, Identifiable {
-    var id: Int
+struct CharacterEntity {
+    var id: ID
     var name: String
     var modified: Date
     var thumbnail: ThumbnailEntity
@@ -12,3 +12,20 @@ struct CharacterEntity: Decodable, Identifiable {
 //    var events: [EventEntity]
 }
 
+extension CharacterEntity: Decodable {}
+
+extension CharacterEntity: Identifiable {
+    typealias ID = Int
+}
+
+extension CharacterEntity: Equatable {
+    static func == (lhs: CharacterEntity, rhs: CharacterEntity) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+extension CharacterEntity: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}

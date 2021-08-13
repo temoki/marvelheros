@@ -4,8 +4,17 @@ struct CharactersView: View {
     @ObservedObject var viewModel: CharactersViewModel
     
     var body: some View {
-        List(viewModel.characters) { character in
-            Text(character.name)
+        ZStack(alignment: .center) {
+            List(viewModel.characters) { character in
+                Text(character.name)
+                    .onAppear() {
+                        viewModel.onAppear(character: character)
+                    }
+            }
+            
+            if viewModel.isLoading {
+                ProgressView()
+            }
         }
         .alert(
             viewModel.alert.message,
