@@ -48,7 +48,7 @@ struct CharactersRequest {
 }
 
 extension CharactersRequest: APIRequest {
-    typealias Response = [CharacterEntity]
+    typealias Result = CharacterEntity
 
     var path: String {
         "characters"
@@ -60,7 +60,7 @@ extension CharactersRequest: APIRequest {
             queryItems["name"] = name
         }
         if let nameStartsWith = self.nameStartsWith {
-            queryItems["name"] = nameStartsWith
+            queryItems["nameStartsWith"] = nameStartsWith
         }
         if let modifiedSince = self.modifiedSince {
             // ？

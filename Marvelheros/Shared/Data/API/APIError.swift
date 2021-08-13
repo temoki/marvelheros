@@ -16,10 +16,16 @@ extension APIError: CustomNSError {
         switch self {
         case .sessionError(let error):
             return [NSUnderlyingErrorKey: error as NSError]
+
         case .decodeError(let error):
             return [NSUnderlyingErrorKey: error as NSError]
+
         case .unacceptableCode(let statusCode, let responseBody):
-            return ["status_code": statusCode, "response_body": responseBody]
+            var userInfo: [String: Any] = ["status_code": statusCode]
+            if let responseBody = responseBody {
+                userInfo["response_body"] = responseBody
+            }
+            return userInfo
         }
     }
 }

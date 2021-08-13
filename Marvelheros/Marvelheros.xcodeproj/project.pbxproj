@@ -28,6 +28,8 @@
 		1473BFF626C4F523008AA949 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473BFF426C4F523008AA949 /* APIRequest.swift */; };
 		1473BFF826C4F539008AA949 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473BFF726C4F539008AA949 /* APIError.swift */; };
 		1473BFF926C4F539008AA949 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473BFF726C4F539008AA949 /* APIError.swift */; };
+		14B7550C26C5E9D9007C8C12 /* APIResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7550B26C5E9D9007C8C12 /* APIResponseBody.swift */; };
+		14B7550D26C5E9D9007C8C12 /* APIResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7550B26C5E9D9007C8C12 /* APIResponseBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 		145F4EE926BCD33000BC17B1 /* marvelapi.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = marvelapi.plist; sourceTree = "<group>"; };
 		1473BFF426C4F523008AA949 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1473BFF726C4F539008AA949 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		14B7550B26C5E9D9007C8C12 /* APIResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,7 @@
 				145F4EE326BCB09000BC17B1 /* APIClient.swift */,
 				1473BFF426C4F523008AA949 /* APIRequest.swift */,
 				1473BFF726C4F539008AA949 /* APIError.swift */,
+				14B7550B26C5E9D9007C8C12 /* APIResponseBody.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -362,6 +366,7 @@
 				141AB6B826BBBC03005B7E6B /* CharactersView.swift in Sources */,
 				141AB6B626BBBC03005B7E6B /* MarvelherosApp.swift in Sources */,
 				1473BFF526C4F523008AA949 /* APIRequest.swift in Sources */,
+				14B7550C26C5E9D9007C8C12 /* APIResponseBody.swift in Sources */,
 				145F4EDF26BCAF0700BC17B1 /* Character.swift in Sources */,
 				1473BFF826C4F539008AA949 /* APIError.swift in Sources */,
 			);
@@ -376,6 +381,7 @@
 				141AB6B926BBBC03005B7E6B /* CharactersView.swift in Sources */,
 				141AB6B726BBBC03005B7E6B /* MarvelherosApp.swift in Sources */,
 				1473BFF626C4F523008AA949 /* APIRequest.swift in Sources */,
+				14B7550D26C5E9D9007C8C12 /* APIResponseBody.swift in Sources */,
 				145F4EE026BCAF0700BC17B1 /* Character.swift in Sources */,
 				1473BFF926C4F539008AA949 /* APIError.swift in Sources */,
 			);
