@@ -34,6 +34,7 @@
 		14B7551126C5F031007C8C12 /* ThumbnailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7550F26C5F031007C8C12 /* ThumbnailEntity.swift */; };
 		14B7551326C5F04F007C8C12 /* CharactersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7551226C5F04F007C8C12 /* CharactersRequest.swift */; };
 		14B7551426C5F04F007C8C12 /* CharactersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7551226C5F04F007C8C12 /* CharactersRequest.swift */; };
+		14F2DA6A26C72F9400BBEBA1 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F2DA6926C72F9400BBEBA1 /* CharacterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		141AB6AA26BBBC03005B7E6B /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		141AB6B026BBBC03005B7E6B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		141AB6B426BBBC03005B7E6B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		142F748626C732B6001CCD6B /* Marvelheros--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Marvelheros--iOS--Info.plist"; sourceTree = "<group>"; };
 		145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		145F4EDE26BCAF0700BC17B1 /* CharacterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
 		145F4EE326BCB09000BC17B1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		14B7550B26C5E9D9007C8C12 /* APIResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseBody.swift; sourceTree = "<group>"; };
 		14B7550F26C5F031007C8C12 /* ThumbnailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailEntity.swift; sourceTree = "<group>"; };
 		14B7551226C5F04F007C8C12 /* CharactersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRequest.swift; sourceTree = "<group>"; };
+		14F2DA6926C72F9400BBEBA1 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		141AB68E26BBBC00005B7E6B = {
 			isa = PBXGroup;
 			children = (
+				142F748626C732B6001CCD6B /* Marvelheros--iOS--Info.plist */,
 				141AB69326BBBC01005B7E6B /* Shared */,
 				141AB6A926BBBC03005B7E6B /* Tests iOS */,
 				141AB6B326BBBC03005B7E6B /* Tests macOS */,
@@ -161,6 +165,7 @@
 			children = (
 				141AB69526BBBC01005B7E6B /* CharactersView.swift */,
 				145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */,
+				14F2DA6926C72F9400BBEBA1 /* CharacterView.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				14B7551326C5F04F007C8C12 /* CharactersRequest.swift in Sources */,
 				145F4EDC26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */,
 				141AB6B826BBBC03005B7E6B /* CharactersView.swift in Sources */,
+				14F2DA6A26C72F9400BBEBA1 /* CharacterView.swift in Sources */,
 				141AB6B626BBBC03005B7E6B /* MarvelherosApp.swift in Sources */,
 				1473BFF526C4F523008AA949 /* APIRequest.swift in Sources */,
 				14B7550C26C5E9D9007C8C12 /* APIResponseBody.swift in Sources */,
@@ -552,6 +558,7 @@
 				DEVELOPMENT_TEAM = U9KLKYC4QN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Marvelheros--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -582,6 +589,7 @@
 				DEVELOPMENT_TEAM = U9KLKYC4QN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Marvelheros--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

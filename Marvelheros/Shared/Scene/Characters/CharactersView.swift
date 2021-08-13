@@ -6,7 +6,7 @@ struct CharactersView: View {
     var body: some View {
         ZStack(alignment: .center) {
             List(viewModel.characters) { character in
-                Text(character.name)
+                CharacterView(character: character)
                     .onAppear() {
                         viewModel.onAppear(character: character)
                     }
