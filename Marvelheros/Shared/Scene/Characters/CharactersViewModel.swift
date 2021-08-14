@@ -6,7 +6,8 @@ class CharactersViewModel: ObservableObject {
     @Published var isLoading: Bool = true
     @Published var alert: (isPresented: Bool, message: String) = (false, "")
     
-    init() {
+    init(apiClient: APIClient) {
+        self.apiClient = apiClient
         subscribe()
     }
     
@@ -17,6 +18,8 @@ class CharactersViewModel: ObservableObject {
     }
     
     // MARK: - Private
+
+    private let apiClient: APIClient
     private var cancellables = Set<AnyCancellable>()
     private let offsetSubject = CurrentValueSubject<Int, Never>(0)
     
@@ -25,12 +28,13 @@ class CharactersViewModel: ObservableObject {
     }
     
     private func subscribe() {
+        let apiClient = self.apiClient
         offsetSubject
             .handleEvents(receiveOutput: { [weak self] _ in
                 self?.isLoading = true
             })
             .flatMap { offset in
-                APIClient.shared.send(CharactersRequest(limit: 100, offset: offset, orderBy: .nameAscending))
+                apiClient.send(CharactersRequest(limit: 100, offset: offset, orderBy: .nameAscending))
             }
             .prefix(while: { !$0.data.results.isEmpty })
             .receive(on: DispatchQueue.main)

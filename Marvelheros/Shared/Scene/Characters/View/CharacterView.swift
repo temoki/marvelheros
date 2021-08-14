@@ -29,7 +29,7 @@ struct CharacterView: View {
 
 struct CharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterView(character: .cyclops)
-            .previewLayout(.fixed(width: 200, height: 250))
+        CharacterView(character: .wolverine)
+            .previewLayout(.sizeThatFits)
     }
 }

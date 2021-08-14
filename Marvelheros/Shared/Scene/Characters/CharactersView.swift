@@ -35,6 +35,6 @@ struct CharactersView: View {
 
 struct CharactersView_Previews: PreviewProvider {
     static var previews: some View {
-        CharactersView(viewModel: .init())
+        CharactersView(viewModel: .init(apiClient: APIClientMock()))
     }
 }
