@@ -41,6 +41,8 @@
 		14D02FC726C783B40044EE8D /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D02FC526C783B40044EE8D /* APIClientMock.swift */; };
 		14D02FC926C788AA0044EE8D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D02FC826C788AA0044EE8D /* MainView.swift */; };
 		14D02FCA26C788AA0044EE8D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D02FC826C788AA0044EE8D /* MainView.swift */; };
+		14D02FCF26C799400044EE8D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D02FCE26C799400044EE8D /* Environment.swift */; };
+		14D02FD026C799400044EE8D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D02FCE26C799400044EE8D /* Environment.swift */; };
 		14F2DA6A26C72F9400BBEBA1 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F2DA6926C72F9400BBEBA1 /* CharacterView.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,7 @@
 		14D02FC226C77F080044EE8D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		14D02FC526C783B40044EE8D /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		14D02FC826C788AA0044EE8D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		14D02FCE26C799400044EE8D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		14F2DA6926C72F9400BBEBA1 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +142,7 @@
 				145F4EE126BCAFC200BC17B1 /* Scene */,
 				141AB69426BBBC01005B7E6B /* App.swift */,
 				14D02FC826C788AA0044EE8D /* MainView.swift */,
+				14D02FCE26C799400044EE8D /* Environment.swift */,
 				141AB69626BBBC03005B7E6B /* Assets.xcassets */,
 				145F4EE926BCD33000BC17B1 /* marvelapi.plist */,
 			);
@@ -398,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				145F4EE426BCB09000BC17B1 /* APIClientImpl.swift in Sources */,
+				14D02FCF26C799400044EE8D /* Environment.swift in Sources */,
 				14D02FC326C77F080044EE8D /* APIClient.swift in Sources */,
 				14B7551326C5F04F007C8C12 /* CharactersRequest.swift in Sources */,
 				145F4EDC26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */,
@@ -422,6 +427,7 @@
 				145F4EE526BCB09000BC17B1 /* APIClientImpl.swift in Sources */,
 				14D02FCA26C788AA0044EE8D /* MainView.swift in Sources */,
 				14B7551426C5F04F007C8C12 /* CharactersRequest.swift in Sources */,
+				14D02FD026C799400044EE8D /* Environment.swift in Sources */,
 				145F4EDD26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */,
 				141AB6B926BBBC03005B7E6B /* CharactersView.swift in Sources */,
 				141AB6B726BBBC03005B7E6B /* App.swift in Sources */,

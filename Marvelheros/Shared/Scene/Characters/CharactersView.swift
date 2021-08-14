@@ -8,10 +8,14 @@ struct CharactersView: View {
             ScrollView {
                 LazyVGrid(columns: gridColumns, spacing: 8) {
                     ForEach(viewModel.characters) { character in
-                        CharacterView(character: character)
-                            .onAppear() {
-                                viewModel.onAppear(character: character)
-                            }
+                        NavigationLink(destination: {
+                            Text(character.name)
+                        }, label: {
+                            CharacterView(character: character)
+                                .onAppear() {
+                                    viewModel.onAppear(character: character)
+                                }
+                        }).buttonStyle(.plain)
                     }
                 }
                 .padding(8)
@@ -21,6 +25,7 @@ struct CharactersView: View {
                 ProgressView()
             }
         }
+        .navigationTitle("MARVEL")
         .alert(
             viewModel.alert.message,
             isPresented: $viewModel.alert.isPresented,
