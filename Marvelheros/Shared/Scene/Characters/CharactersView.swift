@@ -5,13 +5,18 @@ struct CharactersView: View {
     
     var body: some View {
         ZStack(alignment: .center) {
-            List(viewModel.characters) { character in
-                CharacterView(character: character)
-                    .onAppear() {
-                        viewModel.onAppear(character: character)
+            ScrollView {
+                LazyVGrid(columns: gridColumns, spacing: 8) {
+                    ForEach(viewModel.characters) { character in
+                        CharacterView(character: character)
+                            .onAppear() {
+                                viewModel.onAppear(character: character)
+                            }
                     }
+                }
+                .padding(8)
             }
-            
+
             if viewModel.isLoading {
                 ProgressView()
             }
@@ -22,6 +27,10 @@ struct CharactersView: View {
             actions: {}
         )
     }
+    
+    private let gridColumns: [GridItem] = .init(
+        repeating: .init(.adaptive(minimum: 150), spacing: 8), count: 2
+    )
 }
 
 struct CharactersView_Previews: PreviewProvider {
