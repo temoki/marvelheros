@@ -15,7 +15,9 @@
 		141AB6B926BBBC03005B7E6B /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AB69526BBBC01005B7E6B /* CharactersView.swift */; };
 		141AB6BA26BBBC03005B7E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141AB69626BBBC03005B7E6B /* Assets.xcassets */; };
 		141AB6BB26BBBC03005B7E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141AB69626BBBC03005B7E6B /* Assets.xcassets */; };
-		142F748926C766FA001CCD6B /* CharacterBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142F748826C766FA001CCD6B /* CharacterBackground.swift */; };
+		142F748926C766FA001CCD6B /* CharacterViewShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142F748826C766FA001CCD6B /* CharacterViewShape.swift */; };
+		1456EB3526D775D4009CFF8C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1456EB3426D775D4009CFF8C /* Color.swift */; };
+		1456EB3726D779F0009CFF8C /* Highlightables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1456EB3626D779F0009CFF8C /* Highlightables.swift */; };
 		145F4EDC26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */; };
 		145F4EDD26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */; };
 		145F4EDF26BCAF0700BC17B1 /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F4EDE26BCAF0700BC17B1 /* CharacterEntity.swift */; };
@@ -74,7 +76,9 @@
 		141AB6B026BBBC03005B7E6B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		141AB6B426BBBC03005B7E6B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		142F748626C732B6001CCD6B /* Marvelheros--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Marvelheros--iOS--Info.plist"; sourceTree = "<group>"; };
-		142F748826C766FA001CCD6B /* CharacterBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBackground.swift; sourceTree = "<group>"; };
+		142F748826C766FA001CCD6B /* CharacterViewShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewShape.swift; sourceTree = "<group>"; };
+		1456EB3426D775D4009CFF8C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		1456EB3626D779F0009CFF8C /* Highlightables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlightables.swift; sourceTree = "<group>"; };
 		145F4EDB26BCAE4100BC17B1 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		145F4EDE26BCAF0700BC17B1 /* CharacterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
 		145F4EE326BCB09000BC17B1 /* APIClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImpl.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				141AB69426BBBC01005B7E6B /* App.swift */,
 				14D02FC826C788AA0044EE8D /* MainView.swift */,
 				14D02FCE26C799400044EE8D /* Environment.swift */,
+				1456EB3426D775D4009CFF8C /* Color.swift */,
 				141AB69626BBBC03005B7E6B /* Assets.xcassets */,
 				145F4EE926BCD33000BC17B1 /* marvelapi.plist */,
 			);
@@ -180,7 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				14F2DA6926C72F9400BBEBA1 /* CharacterView.swift */,
-				142F748826C766FA001CCD6B /* CharacterBackground.swift */,
+				142F748826C766FA001CCD6B /* CharacterViewShape.swift */,
+				1456EB3626D779F0009CFF8C /* Highlightables.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,11 +411,13 @@
 				14D02FCF26C799400044EE8D /* Environment.swift in Sources */,
 				14D02FC326C77F080044EE8D /* APIClient.swift in Sources */,
 				14B7551326C5F04F007C8C12 /* CharactersRequest.swift in Sources */,
+				1456EB3726D779F0009CFF8C /* Highlightables.swift in Sources */,
+				1456EB3526D775D4009CFF8C /* Color.swift in Sources */,
 				145F4EDC26BCAE4100BC17B1 /* CharactersViewModel.swift in Sources */,
 				141AB6B826BBBC03005B7E6B /* CharactersView.swift in Sources */,
 				14D02FC626C783B40044EE8D /* APIClientMock.swift in Sources */,
 				14F2DA6A26C72F9400BBEBA1 /* CharacterView.swift in Sources */,
-				142F748926C766FA001CCD6B /* CharacterBackground.swift in Sources */,
+				142F748926C766FA001CCD6B /* CharacterViewShape.swift in Sources */,
 				141AB6B626BBBC03005B7E6B /* App.swift in Sources */,
 				1473BFF526C4F523008AA949 /* APIRequest.swift in Sources */,
 				14B7550C26C5E9D9007C8C12 /* APIResponseBody.swift in Sources */,

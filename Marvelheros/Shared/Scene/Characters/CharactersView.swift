@@ -8,14 +8,14 @@ struct CharactersView: View {
             ScrollView {
                 LazyVGrid(columns: gridColumns, spacing: 8) {
                     ForEach(viewModel.characters) { character in
-                        NavigationLink(destination: {
+                        HighlightableNavigationLink(destination: {
                             Text(character.name)
-                        }, label: {
-                            CharacterView(character: character)
+                        }, content: { config in
+                            CharacterView(character: character, isPressed: config.isPressed)
                                 .onAppear() {
                                     viewModel.onAppear(character: character)
                                 }
-                        }).buttonStyle(.plain)
+                        })
                     }
                 }
                 .padding(8)
