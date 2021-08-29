@@ -41,10 +41,11 @@ struct CharacterView: View {
 
 struct CharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            CharacterView(character: .wolverine, isPressed: false)
-            CharacterView(character: .cyclops, isPressed: true)
-        }
+        HighlightableButton(action: {
+            // Nothing to do.
+        }, label: { configuration in
+            CharacterView(character: .wolverine, isPressed: configuration.isPressed)
+        })
         .frame(width: 200)
         .previewLayout(.sizeThatFits)
     }

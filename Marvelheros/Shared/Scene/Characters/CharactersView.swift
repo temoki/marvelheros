@@ -10,7 +10,7 @@ struct CharactersView: View {
                     ForEach(viewModel.characters) { character in
                         HighlightableNavigationLink(destination: {
                             Text(character.name)
-                        }, content: { config in
+                        }, label: { config in
                             CharacterView(character: character, isPressed: config.isPressed)
                                 .onAppear() {
                                     viewModel.onAppear(character: character)
